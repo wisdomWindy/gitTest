@@ -10,6 +10,10 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 /* 注册element-ui */
 Vue.use(ElementUI);
+/* 导入封装的axios 插件*/
+import request from "./lib/request";
+/* 注册封装的axios插件 */
+Vue.use(request);
 /* 设置禁止生产环境下的提示信息 */
 Vue.config.productionTip = false
     /* 创建vue实例 */
