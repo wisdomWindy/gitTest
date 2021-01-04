@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * @description: 
  * @version: 
@@ -42,8 +43,20 @@ const request = {
     }
 };
 /* 暴露请求方法对象 */
+=======
+import axios from "axios";
+const request = {
+    getUsers() {
+        console.log("users");
+    }
+}
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
 export default {
     install(Vue) {
         Vue.prototype.$request = request;
     }
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d

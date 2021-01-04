@@ -13,7 +13,11 @@
         >
         <el-col :span="8"
           ><div class="grid-content bg-purple btn-wrapper">
+<<<<<<< HEAD
             <el-button type="warning" @click="logout">退出</el-button>
+=======
+            <el-button type="warning">警告按钮</el-button>
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
           </div></el-col
         >
       </el-row>
@@ -98,6 +102,7 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
+<<<<<<< HEAD
     logout(){
       window.sessionStorage.removeItem("token");
     }
@@ -108,6 +113,9 @@ export default {
     }
   },
   
+=======
+  },
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
 };
 </script>
 

@@ -15,7 +15,7 @@
 3. 创建分支 `git branch 本地分支名`
 4. 切换到该分支`git checkout 本地分支名`
 5. 与远程仓库建立联系`git remote add origin 远程仓库地址`
-6. 将远程仓库中的分支`git pull origin 远程仓库分支名`
+6. 将远程仓库中的分支拉取到本地`git pull origin 远程仓库分支名`
 ## git辅助命令
 1. 查看所有分支 `git branch`
 2. 创建分支 `git branch 分支名称`
@@ -24,3 +24,4 @@
 5. 强制合并不相关联的仓库 `git pull origin dev --allow-unrelated-histories
 ` 如果你在提交时提交的不是从远程仓库pull到本地的而是在本地创建的需要使用该命令
 6. 取消与远程的连接 `git remote remove origin`
+7. 与远程分支建立关联`git branch -u origin/remote_branch your_branch`
