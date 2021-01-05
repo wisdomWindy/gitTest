@@ -6,20 +6,48 @@
       <el-breadcrumb-item>权限列表</el-breadcrumb-item>
     </el-breadcrumb>
     <el-table :data="tableData" border style="width: 100%" class="table">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
       <el-table-column prop="index" type="index" label="#" width="180"> </el-table-column>
       <el-table-column prop="authName" label="权限名称" width="180">
       </el-table-column>
       <el-table-column prop="path" label="路径"> </el-table-column>
       <el-table-column prop="level" label="层级"> </el-table-column>
+<<<<<<< HEAD
+=======
+=======
+      <el-table-column prop="id" label="#" width="180"> </el-table-column>
+      <el-table-column prop="name" label="权限名称" width="180">
+      </el-table-column>
+      <el-table-column prop="address" label="路径"> </el-table-column>
+      <el-table-column prop="address" label="层级"> </el-table-column>
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
     </el-table>
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
       :current-page="currentPage1"
       :page-sizes="[100, 200, 300, 400]"
       :page-size="10"
       layout="total, sizes, prev, pager, next, jumper"
       :total="tableData.length"
+<<<<<<< HEAD
+=======
+=======
+      :current-page="currentPage4"
+      :page-sizes="[100, 200, 300, 400]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="400"
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
     >
     </el-pagination>
   </div>
@@ -35,6 +63,10 @@ export default {
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
     getRights(){
       this.$request.roleAll("list").then(res=>{
         if(res.data.meta.status==200){
@@ -56,6 +88,20 @@ export default {
   created(){
     this.getRights();
   }
+<<<<<<< HEAD
+=======
+=======
+  },
+  data() {
+    return {
+      currentPage1: 5,
+      currentPage2: 5,
+      currentPage3: 5,
+      currentPage4: 4,
+    };
+  },
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
+>>>>>>> 46a552920bfb8c6ad228c9dd1802477cdfa4ba64
 };
 </script>
 
