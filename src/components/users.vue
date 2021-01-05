@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 <!--
  * @description: 
  * @version: 
@@ -21,16 +25,21 @@
             v-model="userData.query"
             class="input-with-select"
           >
+<<<<<<< HEAD
             <el-button
               slot="append"
               @click.native="search"
               icon="el-icon-search"
             ></el-button>
+=======
+            <el-button slot="append" @click="search" icon="el-icon-search"></el-button>
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
           </el-input>
         </div>
       </el-col>
       <el-col :span="12">
         <div class="grid-content bg-purple-light">
+<<<<<<< HEAD
           <el-button type="success" plain @click="dialogFormVisible = true"
             >添加用户</el-button
           >
@@ -79,6 +88,40 @@
         <template slot-scope="scope">
           <el-switch
             v-model="scope.row.mg_state"
+=======
+          <el-button type="success" plain @click="dialogFormVisible=true">添加用户</el-button>
+        </div>
+      </el-col>
+    </el-row>
+<el-dialog title="添加用户" :visible.sync="dialogFormVisible" center>
+  <el-form :model="newUserData" :rules="rules">
+    <el-form-item label="用户名" :label-width="formLabelWidth">
+      <el-input v-model="newUserData.username" autocomplete="off"></el-input>
+    </el-form-item>
+    <el-form-item label="密码" :label-width="formLabelWidth">
+      <el-input v-model="newUserData.password" autocomplete="off"></el-input>
+    </el-form-item>
+	 <el-form-item label="email" :label-width="formLabelWidth">
+      <el-input v-model="newUserData.email" type="email"  autocomplete="off"></el-input>
+    </el-form-item>
+	 <el-form-item label="mobile" :label-width="formLabelWidth">
+      <el-input v-model="newUserData.mobile" autocomplete="off"></el-input>
+    </el-form-item>
+  </el-form>
+  <div slot="footer" class="dialog-footer">
+    <el-button @click="dialogFormVisible = false">取 消</el-button>
+    <el-button type="primary" @click="dialogFormVisible = false" @close="addUser">确 定</el-button>
+  </div>
+</el-dialog >
+    <el-table :data="tableData" border style="width: 100%">
+      <el-table-column type="index" label="#" width="auto"> </el-table-column>
+      <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
+      <el-table-column prop="email" label="邮箱"> </el-table-column>
+      <el-table-column prop="status" label="用户状态">
+        <template scope="scope">
+          <el-switch
+            v-model="scope.row.mg_status"
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
             active-color="#13ce66"
             inactive-color="#ff4949"
             @change="updateStatus(scope)"
@@ -87,6 +130,7 @@
         </template>
       </el-table-column>
       <el-table-column label="操作">
+<<<<<<< HEAD
         <template slot-scope="scope">
           <el-button type="primary" icon="el-icon-edit" @click="fillUser(scope.$index,scope.row)" circle></el-button>
         <el-button
@@ -151,6 +195,18 @@
         >
       </div>
     </el-dialog>
+=======
+        <el-button type="primary" icon="el-icon-edit" circle></el-button>
+        <el-button
+          type="danger"
+          icon="el-icon-delete"
+          @click="deleteUser"
+          circle
+        ></el-button>
+        <el-button type="success" icon="el-icon-check" circle></el-button>
+      </el-table-column>
+    </el-table>
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
@@ -162,16 +218,74 @@
     >
     </el-pagination>
   </div>
+<<<<<<< HEAD
+=======
+=======
+<template>
+	<div id="users">
+		<el-breadcrumb separator-class="el-icon-arrow-right" class="breadcrumb">
+			<el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+			<el-breadcrumb-item>用户管理</el-breadcrumb-item>
+			<el-breadcrumb-item>用户列表</el-breadcrumb-item>
+		</el-breadcrumb>
+		<el-row>
+			<el-col :span="12">
+				<div class="grid-content bg-purple">
+					<el-input
+						placeholder="请输入内容"
+						v-model="input3"
+						class="input-with-select"
+					>
+						<el-button slot="append" icon="el-icon-search"></el-button>
+					</el-input>
+				</div>
+			</el-col>
+			<el-col :span="12">
+				<div class="grid-content bg-purple-light">
+					<el-button type="success" plain>添加用户</el-button>
+				</div>
+      </el-col>
+		</el-row>
+
+		<el-table :data="tableData" border style="width: 100%">
+			<el-table-column type="index" label="#" width="auto"> </el-table-column>
+			<el-table-column prop="name" label="姓名" width="180"> </el-table-column>
+			<el-table-column prop="email" label="邮箱"> </el-table-column>
+			<el-table-column prop="status" label="用户状态"> </el-table-column>
+			<el-table-column prop="oper" label="操作">
+				<el-button type="primary" icon="el-icon-edit" circle></el-button>
+				<el-button type="danger" icon="el-icon-delete" circle></el-button>
+				<el-button type="success" icon="el-icon-check" circle></el-button>
+			</el-table-column>
+		</el-table>
+		<el-pagination
+			@size-change="handleSizeChange"
+			@current-change="handleCurrentChange"
+			:current-page="currentPage4"
+			:page-sizes="[100, 200, 300, 400]"
+			:page-size="100"
+			layout="total, sizes, prev, pager, next, jumper"
+			:total="400"
+		>
+		</el-pagination>
+	</div>
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
   name: "users",
   data() {
     return {
       currentPage1: 5,
       currentPage2: 5,
       currentPage3: 5,
+<<<<<<< HEAD
       currentPage4: 4,
       currentUser:"",
       roleList:[],
@@ -225,11 +339,36 @@ export default {
         mobile: "",
       },
       /* 修改用户状态 */
+=======
+	  currentPage4: 4,
+	  dialogFormVisible:false,
+	  formLabelWidth:"120px",
+	  rules:{
+		   username: [
+            { required: true, message: '请输入用户名', trigger: 'blur' },
+            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          ],
+          password: [
+            { required: true, message: '请输入密码', trigger: 'blur' }
+		  ],
+		 
+		  mobile:[{ min: 5, max: 11, message: '长度在 3 到 5 个字符', trigger: 'blur' }]
+	  },
+	  newUserData:{
+		  username:"",
+		  password:"",
+		  email:"",
+		  mobile:""
+	  },
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
       statusData: {
         uId: "",
         type: false,
       },
+<<<<<<< HEAD
       /* 查询 */
+=======
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
       userData: {
         query: "",
         pagenum: 1,
@@ -246,6 +385,7 @@ export default {
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
     },
+<<<<<<< HEAD
     /* 修改用户状态 */
     updateStatus(scope) {
       console.log(scope);
@@ -254,10 +394,15 @@ export default {
       this.statusData.type = scope.row.mg_state;
       this.$request.fixStatus(this.statusData).then((res) => {
         console.log(res);
+=======
+    updateStatus(scope) {
+      this.$request.fixStatus(this.statusData).then((res) => {
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
         if (res.data.meta.status == 200) {
           this.$message.success("修改状态成功");
         }
       });
+<<<<<<< HEAD
     },
     /* 填充表单 */
     fillUser(index,row){
@@ -356,13 +501,111 @@ export default {
      }
    });
   },
+=======
+      this.statusData.type = scope.row.mg_status;
+    },
+    deleteUser() {
+      this.$request
+        .deleteUser({
+          id: this.statusData.uId,
+        })
+        .then((res) => {
+          if (res.data.meta.status == 200) {
+            this.$message.success("删除成功");
+          }
+        });
+	},
+	addUser(){
+		this.$request.addUser(newUserData).then(res=>{
+			if(res.data.meta.status==200){
+				this.$message.success("添加用户成功");
+			}
+		});
+	},
+	search(){
+		this.$request.searchUser({
+			id:this.userData.uId
+		}).then(res=>{
+			if(res.data.meta.status==200){
+				this.tableData=res.data.data.users;
+			}
+		});
+	}
+  },
+  created() {
+    this.$request.getUsers(userData).then((res) => {
+      if (res.data.meta.status == 200) {
+        this.total = res.data.data.total;
+        this.tableData = res.data.data.users;
+        this.statusData.uId = res.data.data.id;
+      }
+    });
+  },
+=======
+	name: "users",
+	data() {
+		return {
+			currentPage1: 5,
+			currentPage2: 5,
+			currentPage3: 5,
+			currentPage4: 4,
+			tableData: [
+				{
+					date: "2016-05-02",
+					name: "王小虎",
+					email: "上海市普陀区金沙江路 1518 弄",
+					status: "destrioy",
+				},
+				{
+					date: "2016-05-04",
+					name: "王小虎",
+					email: "上海市普陀区金沙江路 1517 弄",
+					status: "destrioy",
+				},
+				{
+					date: "2016-05-01",
+					name: "王小虎",
+					email: "上海市普陀区金沙江路 1519 弄",
+					status: "destrioy",
+				},
+				{
+					date: "2016-05-03",
+					name: "王小虎",
+					email: "上海市普陀区金沙江路 1516 弄",
+					status: "destrioy",
+				},
+			],
+		};
+	},
+	methods: {
+		handleSizeChange(val) {
+			console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+			console.log(`当前页: ${val}`);
+		},
+	},
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 };
 </script>
 
 <style lang="less" scoped>
 #users {
+<<<<<<< HEAD
   .breadcrumb {
     height: 30px;
   }
+=======
+<<<<<<< HEAD
+  .breadcrumb {
+    height: 30px;
+  }
+=======
+	.breadcrumb {
+		height: 30px;
+	}
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 }
 </style>

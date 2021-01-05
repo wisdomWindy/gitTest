@@ -13,7 +13,15 @@
         >
         <el-col :span="8"
           ><div class="grid-content bg-purple btn-wrapper">
+<<<<<<< HEAD
             <el-button type="warning" @click="logout">退出</el-button>
+=======
+<<<<<<< HEAD
+            <el-button type="warning" @click="logout">退出</el-button>
+=======
+            <el-button type="warning">警告按钮</el-button>
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
           </div></el-col
         >
       </el-row>
@@ -98,17 +106,32 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
+<<<<<<< HEAD
     logout(){
       window.sessionStorage.removeItem("token");
       this.$router.push("login");
     }
   },
  beforeCreate(){
+=======
+<<<<<<< HEAD
+    logout(){
+      window.sessionStorage.removeItem("token");
+    }
+  },
+  beforeCreated(){
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
     if(!window.sessionStorage.getItem("token")){
       this.$router.push("login");
     }
   },
   
+<<<<<<< HEAD
+=======
+=======
+  },
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 };
 </script>
 

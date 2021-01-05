@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 <!--
  * @description: 
  * @version: 
@@ -18,6 +22,23 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="submitForm('ruleForm')" class="sub-btn">登录</el-button>
+<<<<<<< HEAD
+=======
+=======
+<template>
+  <div id="login">
+    <h2>用户登录</h2>
+    <el-form label-position="top" label-width="80px" :model="loginData">
+      <el-form-item label="用户登录">
+        <el-input v-model="loginData.name"></el-input>
+      </el-form-item>
+      <el-form-item label="密码">
+        <el-input v-model="loginData.region"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="submitForm('ruleForm')" class="sub-btn">提交</el-button>
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
       </el-form-item>
     </el-form>
   </div>
@@ -29,12 +50,21 @@ export default {
       return {
         labelPosition: 'right',
         loginData: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
           username: '',
          password: '',
         },
         ruleForm: {
+<<<<<<< HEAD
           username: '',
           password: '',
+=======
+          name: '',
+          region: '',
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
         },
         rules: {
           username: [
@@ -65,6 +95,16 @@ export default {
           }
         });
       },
+<<<<<<< HEAD
+=======
+=======
+          name: '',
+          region: '',
+          type: ''
+        }
+      };
+>>>>>>> 7b954a5d5bd4257962c01869ada31193ed841b8d
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
     }
 };
 </script>

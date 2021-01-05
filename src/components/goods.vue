@@ -10,10 +10,17 @@
         <div class="grid-content bg-purple">
           <el-input
             placeholder="请输入内容"
+<<<<<<< HEAD
             v-model="goodsSelection.query"
             class="input-with-select"
           >
             <el-button slot="append" icon="el-icon-search" @click="getGoodsById"></el-button>
+=======
+            v-model="input3"
+            class="input-with-select"
+          >
+            <el-button slot="append" icon="el-icon-search"></el-button>
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
           </el-input>
         </div>
       </el-col>
@@ -24,6 +31,7 @@
       >
     </el-row>
     <el-table :data="tableData" border style="width: 100%">
+<<<<<<< HEAD
          <el-table-column  type="index" label="#" width="auto"> </el-table-column>
       <el-table-column prop="goods_name" label="商品名称" width="auto"> </el-table-column>
       <el-table-column prop="goods_price" label="商品价格(元)" width="auto"> </el-table-column>
@@ -50,12 +58,24 @@
       :total="total"
     >
     </el-pagination>
+=======
+         <el-table-column prop="date" label="#" width="180"> </el-table-column>
+      <el-table-column prop="date" label="商品名称" width="180"> </el-table-column>
+      <el-table-column prop="name" label="商品价格(元)" width="180"> </el-table-column>
+      <el-table-column prop="address" label="商品重量"> </el-table-column>
+       <el-table-column prop="date" label="创建时间" width="180"> </el-table-column>
+        <el-table-column prop="date" label="操作" width="180">  
+             <el-button type="primary" icon="el-icon-edit" circle></el-button>  
+             <el-button type="danger" icon="el-icon-delete" circle></el-button> </el-table-column>
+    </el-table>
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
   </div>
 </template>
 
 <script>
 export default {
   name: "goods",
+<<<<<<< HEAD
   data(){
     return {
       tableData:[],
@@ -117,6 +137,8 @@ export default {
   created(){
     this.getAllGoods();
   }
+=======
+>>>>>>> af350ed020cbc7d98a535527571da3a1ac07d798
 };
 </script>
 
